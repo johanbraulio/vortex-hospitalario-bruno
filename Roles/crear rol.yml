@@ -1,0 +1,26 @@
+info:
+  name: crear rol
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/roles"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "rol de prueba",
+        "descripcion": "este es solamente un rol de pruevitas",
+        "permisoIds": [1,2,3]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

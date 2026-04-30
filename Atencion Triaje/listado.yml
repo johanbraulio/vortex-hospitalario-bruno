@@ -1,0 +1,34 @@
+info:
+  name: listado
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{baseUrl}}/atencion-triaje?tipoServicioId=1&tipo=t&desde=2026-04-01&hasta=2026-04-01&datosPersonales=condori"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  params:
+    - name: tipoServicioId
+      value: "1"
+      type: query
+    - name: tipo
+      value: t
+      type: query
+    - name: desde
+      value: 2026-04-01
+      type: query
+    - name: hasta
+      value: 2026-04-01
+      type: query
+    - name: datosPersonales
+      value: condori
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

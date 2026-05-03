@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{baseUrl}}/atencion-triaje?tipoServicioId=1&tipo=t&desde=2026-04-01&hasta=2026-04-01&datosPersonales=condori"
+  url: "{{baseUrl}}/atencion-triaje?tipoServicioId=1&tipo=t&desde=2026-01-02&hasta=2026-05-02"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
@@ -17,13 +17,10 @@ http:
       value: t
       type: query
     - name: desde
-      value: 2026-04-01
+      value: 2026-01-02
       type: query
     - name: hasta
-      value: 2026-04-01
-      type: query
-    - name: datosPersonales
-      value: condori
+      value: 2026-05-02
       type: query
   auth: inherit
 

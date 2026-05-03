@@ -1,11 +1,11 @@
 info:
-  name: obtener por cuentaId
+  name: Eliminar triaje
   type: http
   seq: 2
 
 http:
-  method: GET
-  url: "{{baseUrl}}/triajes/93626/1"
+  method: DELETE
+  url: "{{baseUrl}}/triajes/93626"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}

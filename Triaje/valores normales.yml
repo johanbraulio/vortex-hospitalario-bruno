@@ -1,11 +1,11 @@
 info:
-  name: Eliminar triaje
+  name: valores normales
   type: http
-  seq: 2
+  seq: 3
 
 http:
-  method: DELETE
-  url: "{{baseUrl}}/triajes/52854"
+  method: GET
+  url: "{{baseUrl}}/triajes/valores-normales"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
